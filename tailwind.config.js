@@ -9,19 +9,18 @@ module.exports = {
      darkMode: false, // or 'media' or 'class'
      theme: {
        fontFamily: {
-         'sans': ['Inter', 'sans-serif']
+         'sans': ['Roboto', 'sans-serif']
        },
        extend: {
-        gridTemplateColumns: {
-          'one-two': '1fr 2fr',
-          'one-three': '1fr 3fr',
-          'profile': '100px 2fr'
-        }
+        backgroundImage: theme => ({
+          'hero-image': "url('/profile.jpg')"
+         })
        },
      },
      variants: {
        extend: {},
      },
      plugins: [
+      require('@tailwindcss/forms'), require('@tailwindcss/typography')
      ],
    }

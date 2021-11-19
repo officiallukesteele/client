@@ -1,12 +1,14 @@
-import { process } from "autoprefixer";
-
 export default {
-  env: {
-    strapiBaseUri: "http://localhost:1337"
+  publicRuntimeConfig: {
+    strapiBaseURL: "http://localhost:1337",
+    baseURL: "http://localhost:3000",
+  },
+  privateRuntimeConfig: {
+    MAILGUN_API_KEY: process.env.MAILGUN_API_KEY
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "school-portal-template",
+    title: "bitcoin-site-template",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -19,7 +21,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/axios'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -28,20 +30,7 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss"],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth", "@nuxtjs/markdownit", "@nuxtjs/toast",],
-
-  toast: {
-    position: 'top-center',
-    register: [ // Register custom toasts
-      {
-        name: 'my-error',
-        message: 'Oops...Something went wrong',
-        options: {
-          type: 'error'
-        }
-      }
-    ]
-},
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth"],
 
   axios: {
     baseURL: "http://localhost:1337"
@@ -57,13 +46,6 @@ export default {
         }
       }
     }
-  },
-
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    injected: true
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

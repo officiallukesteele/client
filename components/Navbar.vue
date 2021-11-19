@@ -8,7 +8,7 @@
             <div class="flex-shrink-0">
               <img
                 class="h-8 w-8 rounded-full"
-                :src="school_logo_url"
+                src="/profile.jpg"
                 alt="Workflow"
               />
             </div>
@@ -68,25 +68,25 @@
                         aria-orientation="vertical"
                         aria-labelledby="options-menu"
                       >
-                        <nuxt-link to="/newsletters">
+                        <!-- <nuxt-link to="/newsletters">
                           <a
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
                             >Newsletters</a
                           >
-                        </nuxt-link>
-                        <nuxt-link to="/school-calendar">
+                        </nuxt-link> -->
+                        <!-- <nuxt-link to="/school-calendar">
                           <a
                             href="#"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
                             >Calender</a
                           >
-                        </nuxt-link>
+                        </nuxt-link> -->
                         <nuxt-link to="/assignments">
                           <a
                             href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
                             >Assignments</a
                           >
@@ -95,16 +95,25 @@
                         <nuxt-link to="/results">
                           <a
                             href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
                             >Results</a
+                          >
+                        </nuxt-link>
+
+                        <nuxt-link to="/e-learnings">
+                          <a
+                            href="#"
+                            class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                            >E-learning</a
                           >
                         </nuxt-link>
 
                         <nuxt-link to="/payments">
                           <a
                             href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
                             >Payments</a
                           >
@@ -146,7 +155,7 @@
           <div class="hidden md:block">
             <div class="ml-4 flex items-center md:ml-6">
               <button
-                class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                class="bg-gray-800 inline-flex items-center justify-center p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               >
                 <span class="sr-only">View notifications</span>
                 <!-- Heroicon name: bell -->
@@ -165,6 +174,11 @@
                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                   />
                 </svg>
+                <div
+                  class="-ml-2 grid place-content-center w-5 h-5 rounded-full bg-red-400 text-white font-medium text-xs"
+                >
+                  2
+                </div>
               </button>
 
               <!-- Profile dropdown -->
@@ -179,7 +193,6 @@
                     <img
                       @click="isOpen = !isOpen"
                       class="h-8 w-8 rounded-full"
-                      :src="profile_url"
                     />
                   </button>
                 </div>
@@ -230,6 +243,8 @@
             </div>
           </div>
           <div class="-mr-2 flex md:hidden">
+           
+
             <!-- Mobile menu button -->
             <button
               class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -257,6 +272,7 @@
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
+
               <!--
               Heroicon name: x
 
@@ -295,55 +311,53 @@
           <nuxt-link to="/dashboard">
             <a
               href="#"
-              class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Dashboard</a
-            >
-          </nuxt-link>
-
-          <nuxt-link to="/newsletters">
-            <a
-              href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Newsletters</a
-            >
-          </nuxt-link>
-
-          <nuxt-link to="/school-calendar">
-            <a
-              href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Calendar</a
+              class="bg-gray-900 text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >Home</a
             >
           </nuxt-link>
 
           <nuxt-link to="/results">
             <a
               href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Results</a
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >About Us</a
             >
           </nuxt-link>
 
           <nuxt-link to="/assignments">
             <a
               href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Assignments</a
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >Investment Services</a
             >
           </nuxt-link>
 
-          <nuxt-link to="/e-learning">
+          <nuxt-link to="/e-learnings">
             <a
               href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >E-learning center</a
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >Partnership</a
             >
           </nuxt-link>
           <nuxt-link to="/payments">
             <a
               href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >Payments</a
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >Press</a
+            >
+          </nuxt-link>
+          <nuxt-link to="/payments">
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >FAQ</a
+            >
+          </nuxt-link>
+          <nuxt-link to="/payments">
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+              >Contact Us</a
             >
           </nuxt-link>
         </div>
@@ -352,14 +366,14 @@
             <nuxt-link to="/profile">
               <a
                 href="#"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                class="block px-3 py-2 rounded-md text-lg font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                 >Your Profile</a
               >
             </nuxt-link>
 
             <a
               @click="logout"
-              class="block px-3 py-2 rounded-md text-base cursor-pointer font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+              class="block px-3 py-2 rounded-md text-lg cursor-pointer font-medium text-gray-400 hover:text-white hover:bg-gray-700"
               >Logout</a
             >
           </div>
@@ -375,62 +389,36 @@ export default {
   computed: {
     ...mapGetters(["isAuthenticated", "loggedInUser"]),
   },
+  watch: {
+    $route(to, from) {
+      this.isNotCollapsed = false
+      this.isDropdownOpen = false
+      this.isOpen = false
+    }
+  },
   data() {
     return {
-      isNotCollapsed: false,
+      isNotCollapsed: "",
       isOpen: false,
       isDropdownOpen: false,
-      profile_url: "",
-      school_logo_url: "",
     };
   },
   methods: {
     async logout() {
-      const accountType = this.$auth.user.accountType
+      const accountType = this.$auth.user.accountType;
       await this.$auth.logout();
-      if(accountType === 'Student') {
+      if (accountType === "Student") {
         this.$router.push("/");
       }
-      
-      if(accountType === 'Staff') {
+
+      if (accountType === "Staff") {
         this.$router.push("/staff-login");
       }
 
-      if(accountType === 'Admin') {
+      if (accountType === "Admin") {
         this.$router.push("/admin-login");
       }
     },
-
-    async createProfilePicUrl() {
-      const name = `${this.loggedInUser.username
-        .replace(/\s+/g, "")
-        .trim()
-        .toLowerCase()}.jpg`;
-
-      const uploads = await this.$axios.$get("/upload/files");
-
-      const userUploadObject = uploads.filter((upload) => upload.name === name);
-
-      const url = `http://localhost:1337${userUploadObject[0].formats.small.url}`;
-
-      this.profile_url = url;
-    },
-
-    async createSchoolLogo() {
-      const uploads = await this.$axios.$get("/upload/files");
-
-      const userUploadObject = uploads.filter(
-        (upload) => upload.name === "school-logo.jpg"
-      );
-
-      const url = `http://localhost:1337${userUploadObject[0].formats.small.url}`;
-
-      this.school_logo_url = url;
-    },
-  },
-  mounted() {
-    this.createProfilePicUrl();
-    this.createSchoolLogo();
-  },
+  }
 };
 </script>
