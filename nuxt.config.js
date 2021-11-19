@@ -1,4 +1,7 @@
 export default {
+  server: {
+    host: '0.0.0.0'
+  },
   publicRuntimeConfig: {
     strapiBaseURL: "https://strapi-axy8.onrender.com",
     baseURL: "https://admin-frontend.onrender.com",
