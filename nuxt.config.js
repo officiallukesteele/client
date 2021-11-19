@@ -1,7 +1,7 @@
 export default {
   publicRuntimeConfig: {
-    strapiBaseURL: "http://localhost:1337",
-    baseURL: "http://localhost:3000",
+    strapiBaseURL: "https://strapi-axy8.onrender.com",
+    baseURL: "https://admin-frontend.onrender.com",
   },
   privateRuntimeConfig: {
     MAILGUN_API_KEY: process.env.MAILGUN_API_KEY
@@ -33,7 +33,7 @@ export default {
   modules: ["@nuxtjs/axios", "@nuxtjs/auth"],
 
   axios: {
-    baseURL: "http://localhost:1337"
+    baseURL: "https://strapi-axy8.onrender.com"
   },
 
   auth: {
