@@ -32,7 +32,7 @@
                       aria-haspopup="true"
                       aria-expanded="true"
                     >
-                      Student actions
+                      User actions
                       <!-- Heroicon name: chevron-down -->
                       <svg
                         class="-mr-1 ml-2 h-5 w-5"
@@ -83,39 +83,47 @@
                             >Calender</a
                           >
                         </nuxt-link> -->
-                        <nuxt-link to="/assignments">
+                        <nuxt-link to="/deposit">
                           <a
                             href="#"
                             class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
-                            >Assignments</a
+                            >Deposit</a
                           >
                         </nuxt-link>
 
-                        <nuxt-link to="/results">
+                        <nuxt-link to="/transaction-history">
                           <a
                             href="#"
                             class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
-                            >Results</a
+                            >Transaction history</a
                           >
                         </nuxt-link>
 
-                        <nuxt-link to="/e-learnings">
+                        <nuxt-link to="/withdrawal">
                           <a
                             href="#"
                             class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
-                            >E-learning</a
+                            >Withdrawals</a
                           >
                         </nuxt-link>
 
-                        <nuxt-link to="/payments">
+                        <nuxt-link to="/login">
                           <a
                             href="#"
                             class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
-                            >Payments</a
+                            >Login</a
+                          >
+                        </nuxt-link>
+                        <nuxt-link to="/register">
+                          <a
+                            href="#"
+                            class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                            >Register</a
                           >
                         </nuxt-link>
                         <!-- <form method="POST" action="#">
@@ -221,14 +229,14 @@
                     aria-orientation="vertical"
                     aria-labelledby="user-menu"
                   >
-                    <nuxt-link to="/profile">
+                    <!-- <nuxt-link to="/profile">
                       <a
                         href="#"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         role="menuitem"
                         >Your Profile</a
                       >
-                    </nuxt-link>
+                    </nuxt-link> -->
 
                     <a
                       href="#"
@@ -316,48 +324,41 @@
             >
           </nuxt-link>
 
-          <nuxt-link to="/results">
+          <nuxt-link to="/deposit">
             <a
               href="#"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >About Us</a
+              >Deposit</a
             >
           </nuxt-link>
 
-          <nuxt-link to="/assignments">
+          <nuxt-link to="/transaction-history">
             <a
               href="#"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >Investment Services</a
+              >Transaction history</a
             >
           </nuxt-link>
 
-          <nuxt-link to="/e-learnings">
+          <nuxt-link to="/withdrawal">
             <a
               href="#"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >Partnership</a
+              >Withdrawals</a
             >
           </nuxt-link>
-          <nuxt-link to="/payments">
+          <nuxt-link to="/register">
             <a
               href="#"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >Press</a
+              >Register</a
             >
           </nuxt-link>
-          <nuxt-link to="/payments">
+          <nuxt-link to="/login">
             <a
               href="#"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >FAQ</a
-            >
-          </nuxt-link>
-          <nuxt-link to="/payments">
-            <a
-              href="#"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
-              >Contact Us</a
+              >Login</a
             >
           </nuxt-link>
         </div>
