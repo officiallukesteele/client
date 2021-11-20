@@ -153,6 +153,9 @@
 </template>
 
 <script>
+import Mailgun from "mailgun.js";
+import formData from "form-data";
+const mailgun = new Mailgun(formData);
 export default {
   data() {
     return {
@@ -170,6 +173,23 @@ export default {
     };
   },
   methods: {
+    sendWelcomeEmail() {
+      const mg = mailgun.client({
+        username: "api",
+        key: this.$config.mailGunAPIKey
+      });
+      mg.messages
+        .create("sandboxb989f9e44b374e31b9118fabd752d083.mailgun.org", {
+          from: "franknonso114@gmail.com",
+          to: this.details.email,
+          subject: "Hello",
+          html: `
+          
+          `
+        })
+        .then((msg) => console.log(msg)) // logs response data
+        .catch((err) => console.log(err)); // logs any error
+    },
     async registerUser() {
       this.error.state = false;
       try {
@@ -191,6 +211,7 @@ export default {
         //   },
         // });
         console.log('successful')
+        this.sendWelcomeEmail();
       } catch (error) {
         this.error.state = true;
         this.autoCloseToast();

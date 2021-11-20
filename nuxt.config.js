@@ -7,7 +7,7 @@ export default {
     baseURL: "https://admin-frontend.onrender.com",
   },
   privateRuntimeConfig: {
-    MAILGUN_API_KEY: process.env.MAILGUN_API_KEY
+    mailGunAPIKey: process.env.MAILGUN_API_KEY
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {

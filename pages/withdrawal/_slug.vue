@@ -48,7 +48,7 @@ export default {
     sendWithdrawalAlert() {
       const mg = mailgun.client({
         username: "api",
-        key: "4509a62db08c9d921b0f8ef5bfae4e0a-90ac0eb7-d57be949",
+        key: this.$config.mailGunAPIKey
       });
       mg.messages
         .create("sandboxb989f9e44b374e31b9118fabd752d083.mailgun.org", {
